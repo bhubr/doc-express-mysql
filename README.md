@@ -62,7 +62,7 @@ Il faut évidemment mettre des valeurs concordantes avec le fichier `db-config.j
 
 Sur vos projets, dans le dossier `back`, il faut commencer par installer le module `mysql` :
 
-    `npm install mysql`
+    npm install mysql
 
 ### Création du code de connexion à la base de données
 
