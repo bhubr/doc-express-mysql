@@ -265,12 +265,14 @@ module.exports = router;
 
 ```
 
-Voici comment je vais l'utiliser dans mon appli Express :
+Voici comment je vais l'utiliser dans mon appli Express (`app.js`, `index.js` ou encore `server.js`, Express nous laisse libre de le nommer comme il nous convient):
 
 ```javascript
 const express = require('express');
 const bodyParser = require('body-parser');
 const tasksRouter = require('./routes/tasks');
+
+const app = express();
 
 // Permettre le décodage de données JSON envoyées
 // par le client
