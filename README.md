@@ -126,7 +126,7 @@ Je vais donc structurer mon appli comme ceci, au niveau du backend :
     back/
       db-settings.js
       db.js
-      server.js
+      index.js
       routes/
         tasks.js
         users.js
