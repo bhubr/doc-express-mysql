@@ -201,7 +201,7 @@ router.get('/:id', (req, res) => {
 });
 
 // Route "CREATE one"
-router.put('/:id', (req, res) => {
+router.post('/', (req, res) => {
   db.query('INSERT INTO task SET ?', req.body, (err, status) => {
     // Toujours vérifier les erreurs
     if (err) {
