@@ -265,7 +265,7 @@ module.exports = router;
 
 ```
 
-Voici comment je vais l'utiliser dans mon appli Express (`app.js`, `index.js` ou encore `server.js`, Express nous laisse libre de le nommer comme il nous convient):
+Voici comment je vais l'utiliser dans mon appli Express (sur les dépôts projets, le mieux est de le nommer `back/index.js`):
 
 ```javascript
 const express = require('express');
