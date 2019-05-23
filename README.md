@@ -282,5 +282,11 @@ app.use(bodyParser.json());
 // arrivera sur la route router.get('/:id' ...) du routeur
 app.use('/api/tasks', tasksRouter);
 
-app.listen(process.env.PORT || 5000);
+app.listen(process.env.PORT || 5000, err => {
+  if (err) {
+    console.error(err.message);
+  } else {
+    console.log(`Server is listening on port ${process.env.PORT || 5000}`);
+  }
+});
 ```
