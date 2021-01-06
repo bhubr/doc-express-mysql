@@ -10,6 +10,8 @@ Cette doc synthétise les notions vues dans les quêtes Express 2 à 5 sur :
 
 ### Création d'un fichier de configuration
 
+> :warning: Cette doc a été faite il y a longtemps. Cette section sur la configuration est un peu obsolète. Utiliser plutôt [dotenv](https://www.npmjs.com/package/dotenv) pour gérer les paramètres de configuration d'une app.
+
 Pour ne pas stocker dans le dépôt GitHub les paramètres de la base de données, il est nécessaire de stocker ces paramètres dans un fichier non suivi par git. Vous pouvez le nommer, par exemple, `db-config.json` ou `db-settings.json`, et le stocker directement sous `back`.
 
 Le nom de ce fichier doit être ajouté dans le `.gitignore` **du dossier `back`**. Par contre, à des fins de documentation, pour qu'une personne puisse récupérer le dépôt et l'utiliser, vous pouvez écrire un fichier `db-config.sample.json` ou `db-settings.sample.json`, contenant des valeurs "bidon" et qui, lui, peut (et doit) être commité
