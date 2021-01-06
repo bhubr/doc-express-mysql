@@ -45,7 +45,7 @@ Sur le même principe, vous pouvez créer un fichier `init.sql` (par exemple sou
 Ce fichier est également à référencer dans `.gitignore`. Voici à quoi il ressemblerait dans mon projet "TodoList" :
 
 ```sql
-CREATE DATABASE wcs_project3_todolist CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+CREATE DATABASE wcs_project3_todolist CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 CREATE USER 'todolist'@'localhost' IDENTIFIED BY 'WCSTodoList';
 GRANT ALL PRIVILEGES ON wcs_project3_todolist.* TO 'todolist'@'localhost';
 FLUSH PRIVILEGES;
@@ -60,11 +60,11 @@ Il faut évidemment mettre des valeurs concordantes avec le fichier `db-config.j
 
 ## Mise en place sur Express
 
-### Installation du module `mysql`
+### Installation du module `mysql2`
 
-Sur vos projets, dans le dossier `back`, il faut commencer par installer le module `mysql` :
+Sur vos projets, dans le dossier `back`, il faut commencer par installer le module `mysql2` :
 
-    npm install mysql
+    npm install mysql2
 
 ### Création du code de connexion à la base de données
 
@@ -78,9 +78,10 @@ Voici son contenu (notez qu'il importe le fichier de paramètres de la base de d
 
 ```javascript
 // db.js
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const settings = require('./db-settings.json');
 
+// On peut utiliser mysql.createPool avec les mêmes paramètres => mieux en produc
 const connection = mysql.createConnection(settings);
 
 module.exports = connection;
